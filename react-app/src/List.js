@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ListItem from './ListItem'
 
-class List extends Component {
-    render() {
-        return (
+function List(props) {
+    console.log(props.recommendedVideos)
+    return (
             <div>
-<div>This is my list</div>
-<ListItem />
+                
+                <ListItem  recommendedVideos={props.recommendedVideos}/>
+                
+                
             </div>
             
         )
-    }
 }
+
 
 export default List
