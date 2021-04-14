@@ -4,7 +4,7 @@ import ListItem from './ListItem'
 function List(props) {
     console.log(props.recommendedVideos)
     return (
-            <div>
+            <div class='list'>
                 
                 <ListItem  recommendedVideos={props.recommendedVideos}/>
                 

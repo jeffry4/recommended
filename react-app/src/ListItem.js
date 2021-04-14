@@ -7,14 +7,12 @@ class ListItem extends Component {
             <div>
                 {this.props.recommendedVideos.map(recommendedVideos => {
                     return(
-                        <div>
-                            <div>{recommendedVideos.video_thumbnail}</div>
-                            <div>{recommendedVideos.video_title}</div>
-                            <div>{recommendedVideos.view_total}</div>
-                            <div>{recommendedVideos.total_time_uploaded}</div>
-                            
+                        <div class='listItem'>
+                            <img id='thumbnail' src={recommendedVideos.thumbnail}></img>
+                            <div id='title'>{recommendedVideos.title}</div>
+                            <div id='totalViews'>{recommendedVideos.totalviews}views</div>
+                            <div id='createdOn'>{recommendedVideos.createdon}</div>
                         </div>
-                        
                     )
                 })}
             </div>

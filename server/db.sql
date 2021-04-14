@@ -1,24 +1,25 @@
 CREATE DATABASE recommended;
-
+DROP TABLE IF EXISTS recommended;
 CREATE TABLE recommended (
-    video_id SERIAL,
-    video_thumbnail TEXT,
-    video_title TEXT,
+    id SERIAL,
+    thumbnail TEXT,
+    title TEXT,
     publisher TEXT,
-    view_total INT,
-    total_time_uploaded TEXT,
-    PRIMARY KEY (video_id)
-)
+    totalViews INT,
+    createdOn TEXT,
+    video_key SERIAL,
+    PRIMARY KEY (id)
+);
 
-INSERT INTO recommended (video_thumbnail,video_title,publisher,view_total,total_time_uploaded)
-VALUES('picture', 'title 1', 'publisher 1', 100, '1 year');
-INSERT INTO recommended (video_thumbnail,video_title,publisher,view_total,total_time_uploaded)
-VALUES('picture', 'title 2', 'publisher 2', 100, '1 year');
-INSERT INTO recommended (video_thumbnail,video_title,publisher,view_total,total_time_uploaded)
-VALUES('picture', 'title 3', 'publisher 3', 100, '1 year');
-INSERT INTO recommended (video_thumbnail,video_title,publisher,view_total,total_time_uploaded)
-VALUES('picture', 'title 4', 'publisher 4', 100, '1 year');
-INSERT INTO recommended (video_thumbnail,video_title,publisher,view_total,total_time_uploaded)
+INSERT INTO recommended (thumbnail,title,publisher,totalViews,createdOn)
+VALUES('https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80', 'title 1', 'publisher 1', 100, '1 year');
+INSERT INTO recommended (thumbnail,title,publisher,totalViews,createdOn)
+VALUES('https://images.pexels.com/photos/1289845/pexels-photo-1289845.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 'title 2', 'publisher 2', 100, '1 year');
+INSERT INTO recommended (thumbnail,title,publisher,totalViews,createdOn)
+VALUES('https://images.unsplash.com/photo-1518331483807-f6adb0e1ad23?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80', 'title 3', 'publisher 3', 100, '1 year');
+INSERT INTO recommended (thumbnail,title,publisher,totalViews,createdOn)
+VALUES('https://image.shutterstock.com/image-photo/indonesia-march-4-2019-stormtrooper-260nw-1903617274.jpg', 'title 4', 'publisher 4', 100, '1 year');
+INSERT INTO recommended (thumbnail,title,publisher,totalViews,createdOn)
 VALUES('#ae6467', 'title 5', 'publisher 5', 100, '1 year');
 INSERT INTO recommended (video_thumbnail,video_title,publisher,view_total,total_time_uploaded)
 VALUES('#ae6466', 'title 6', 'publisher 6', 100, '1 year');
