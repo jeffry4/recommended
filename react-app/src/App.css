@@ -1,0 +1,23 @@
+* {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+
+.list{
+  margin-top: 30%;
+  margin-left: 85%;
+}
+
+.listItem{
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+}
+#thumbnail {
+  
+  width: 20vw;
+  height: 20vh;
+  padding: 2%;
+
+}
