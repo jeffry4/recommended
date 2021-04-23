@@ -7,9 +7,9 @@ class ListItem extends Component {
                 {this.props.recommendedVideos.map(recommendedVideos => {
                     return(
                         <div key={recommendedVideos.id} className='listItem'>
-                            <img id='thumbnail' src={recommendedVideos.thumbnail}></img>
+                            <img id='thumbnail' onClick={() => {dispatchEvent(this.props.changeVideoKey)}} src={recommendedVideos.thumbnail}></img>
                             <div className='stats'>
-                                <div id='title'>{recommendedVideos.title}</div>
+                                <div id='title' onClick={(e) => {console.log(recommendedVideos.video_key)}}>{recommendedVideos.title}</div>
                                 <div id='publisher'>{recommendedVideos.publisher}</div>
                                 <div id='totalViews'>{recommendedVideos.totalviews} views</div>
                                 <div id='createdOn'>{recommendedVideos.createdon} ago</div>
@@ -23,3 +23,4 @@ class ListItem extends Component {
 }
 
 export default ListItem
+//onClick={() => {dispatchEvent(this.props.changeVideoKey}}

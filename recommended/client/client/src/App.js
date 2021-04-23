@@ -6,9 +6,12 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-    recommendedVideos: []
+    recommendedVideos: [],
+    videoKey: 0
     }
   }
+
+  
 
   componentDidMount() { 
     fetch('http://localhost:3203/api/recommended')
@@ -24,18 +27,27 @@ class App extends Component {
     event.target.style.background="";
     event.target.style.color=''
   }
+
+
   
   render(){
+    let changeVideoKey = new CustomEvent("changeVideoKey", {
+      detail:{
+        videoKey:3
+      } 
+    })
+
     return (
       <div >
         <div className='buttons'> 
         <button onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}id="allButton">All</button>
         <button onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} id='relatedButton'>Related</button>
         <button onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} id='recentButton'>Recently Uploaded</button>
-        </div>
+      </div>
        
         <List recommendedVideos={this.state.recommendedVideos} 
         componentDidMount={this.componentDidMount}
+        changeVideoKey={changeVideoKey}
       />
       </div>
     )

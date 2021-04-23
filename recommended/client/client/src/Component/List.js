@@ -8,7 +8,8 @@ function List(props) {
             
             
            
-            <ListItem  recommendedVideos={props.recommendedVideos}/>
+            <ListItem  recommendedVideos={props.recommendedVideos}
+            changeVideoKey={props.changeVideoKey}/>
            
         </div>
     )
