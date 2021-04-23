@@ -8,10 +8,13 @@
 }
 
  .list{
+   position:absolute;
+   top: 12vh;
+   left: 75vw;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   width: 100%;
+   width: 25vw;
  }
 
 .listItem{
@@ -55,11 +58,13 @@
 }
 
 .buttons {
-  
+  position: absolute;
+  top:5vh;
+  left:75vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width:25%;
+  gap:5px;
+  width:10vw;
 }
 
 #allButton{

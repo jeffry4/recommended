@@ -11,8 +11,8 @@ class ListItem extends Component {
                             <div className='stats'>
                                 <div id='title' onClick={(e) => {console.log(recommendedVideos.video_key)}}>{recommendedVideos.title}</div>
                                 <div id='publisher'>{recommendedVideos.publisher}</div>
-                                <div id='totalViews'>{recommendedVideos.totalviews} views</div>
-                                <div id='createdOn'>{recommendedVideos.createdon} ago</div>
+                                <div id='totalViews'>{recommendedVideos.total_views} views</div>
+                                <div id='createdOn'>{recommendedVideos.created_on} ago</div>
                             </div>
                         </div>
                     )
